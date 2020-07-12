@@ -125,7 +125,7 @@ nav.sticky .logo h1 {
 		display: block;
 	}
 	.logo {
-		width: 60vw;
+		width: 80vw;
 	}
 }
 
@@ -169,7 +169,7 @@ nav.sticky .logo h1 {
 .home {
     background-image: url("img/home.jpg");
     background-size: cover;
-    background-position: top;
+    background-position: top right;
     height: 100vh;
 	width: 100vw;
 }
@@ -181,6 +181,7 @@ nav.sticky .logo h1 {
 	right: 10vw;
 	top: 30vh;
 	text-align: center;
+	width: 45vw;
 }
 
 .home .intro h1 {
@@ -193,12 +194,61 @@ nav.sticky .logo h1 {
 
 .home .intro p {
 	font-size: calc(1vh + 1vw);
+	margin-top: 2vh;
 }
 
-.invited {
-	height: 100vh;
+.scroll {
+	position: absolute;
+	bottom: 30px;
+	right: 35vw;
+	transform: translate(-50%, -50%);
+	color: white;
+	z-index: 1;
 }
 
+.scroll span {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-bottom: 1px solid #fff;
+	border-right : 1px solid #fff;
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: animate 2s infinite;
+}
+
+.scroll span:nth-child(2)
+{
+	animation-delay: -0.2s;
+}
+
+.scroll span:nth-child(3)
+{
+	animation-delay: -0.4s;
+}
+
+@keyframes animate {
+	0%
+	{
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+	50%
+	{
+		opacity: 1;
+	}
+	100%
+	{
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.home .intro {
+		width: 50vw;
+	}
+}
 
 @media screen and (max-width: 768px){
 	.home .intro {
@@ -206,7 +256,33 @@ nav.sticky .logo h1 {
 		left: 15vw;
 	}
 	.home .intro p {
-		margin-top: 3vh;
 		font-size: 2.5vh;
 	}
+
+	.scroll {
+		right: 50vw;
+	}
+}
+
+.kukakuka {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+.invited {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20vh;
+}
+
+.invited h2 {
+	font-size: calc(2vh + 1.5vw);
+}
+
+.invited ul {
+	font-size: calc(1vh + 1vw);
+	margin-top: 2vh;
+	line-height: calc(2vh + 2vw);
 }
