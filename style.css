@@ -42,6 +42,11 @@ nav.sticky a {
     letter-spacing: 2px;
 }
 
+.logo a {
+	color: black;
+	text-decoration: none;
+}
+
 nav.sticky .logo h1 {
 	font-size: calc(1vw + 2vh);
 }
@@ -110,7 +115,7 @@ nav.sticky .logo h1 {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 50%;
+		width: 100%;
 		transform: translateX(100%);
 		z-index: 2;
 	}
@@ -219,19 +224,19 @@ nav.sticky .logo h1 {
 
 .scroll span:nth-child(2)
 {
-	animation-delay: -0.2s;
+	animation-delay: -0.1s;
 }
 
 .scroll span:nth-child(3)
 {
-	animation-delay: -0.4s;
+	animation-delay: -0.2s;
 }
 
 @keyframes animate {
 	0%
 	{
 		opacity: 0;
-		transform: rotate(45deg) translate(-20px, -20px);
+		transform: rotate(45deg) translate(-15px, -15px);
 	}
 	50%
 	{
@@ -240,7 +245,7 @@ nav.sticky .logo h1 {
 	100%
 	{
 		opacity: 0;
-		transform: rotate(45deg) translate(20px, 20px);
+		transform: rotate(45deg) translate(15px, 15px);
 	}
 }
 
@@ -264,6 +269,12 @@ nav.sticky .logo h1 {
 	}
 }
 
+@media screen and (max-width: 480px){
+	.home .intro {
+		top: 25vh;
+	}
+}
+
 .kukakuka {
 	display: flex;
 	height: 100vh;
@@ -274,15 +285,87 @@ nav.sticky .logo h1 {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin-top: 20vh;
+	margin-top: 12vh;	
 }
 
 .invited h2 {
+	font-size: calc(3vh + 2vw);
+	text-align: center;
+}
+
+.invited h3 {
+	margin-top: 3vh;
 	font-size: calc(2vh + 1.5vw);
+	text-align: center;
 }
 
 .invited ul {
 	font-size: calc(1vh + 1vw);
 	margin-top: 2vh;
 	line-height: calc(2vh + 2vw);
+}
+
+.invited h4 {
+	margin-top: 5vh;
+	font-size: calc(1vh + 1vw);
+	line-height: calc(1.5vh + 1.5vw);
+	text-align: center;
+}
+
+@media screen and (max-width: 768px){
+	.invited h2 {
+		font-size: calc(4vh + 4vw);
+	}
+	.invited h3 {
+		font-size: calc(2.5vh + 2.5vw);
+		width: 90%;
+	}
+	.invited ul {
+		font-size: calc(1.5vh + 1.5vw);
+		line-height: calc(3vh + 3vw);
+	}
+	.invited h4 {
+		font-size: calc(1.5vh + 1.5vw);
+		line-height: calc(2.5vh + 2.5vw);
+		width: 90%;
+	}
+	
+}
+
+/* ʻAi Pono Module
+---------------------------------------------
+*/
+.aipono {
+	align-items: center;
+	background-color: rgba(25, 129, 77, 0.8);
+	margin-top: 10vh;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 100vw;
+}
+
+.aipono {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.aipono h2 {
+	font-size: calc(3vh + 2vw);
+	padding: 2vh;
+}
+
+.aipono img {
+	width: 540px;
+}
+
+.aipono h3 {
+	margin-top: 2vh;
+	font-size: calc(2vh + 1.5vw);
+}
+
+.aipono h4 {
+	font-size: calc(1vh + 1vw);
 }
