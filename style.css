@@ -17,6 +17,8 @@ nav {
 
 nav.sticky {
 	background: white;
+	border-bottom: ridge;
+	border-bottom-width: 1px;
 	min-height: 8vh;
 	z-index: 4;
 }
@@ -75,7 +77,8 @@ nav.sticky .logo h1 {
 }
 
 .nav-links li:hover {
-	background-color: rgba(25, 129, 77, 0.699);
+	/*background-color: rgba(25, 129, 77, 0.699);*/
+	background-color: rgb(218, 212, 131, 0.7);
 }
 
 .burger {
@@ -312,7 +315,24 @@ nav.sticky .logo h1 {
 	text-align: center;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
+	.invited h2 {
+		font-size: calc(3vh + 3vw);
+	}
+	.invited h3 {
+		font-size: calc(2vh + 2vw);
+	}
+	.invited ul {
+		font-size: calc(1.5vh + 1vw);
+		line-height: calc(3vh + 2vw);
+	}
+	.invited h4 {
+		font-size: calc(1.5vh + 1vw);
+		line-height: calc(2.5vh + 2vw);
+	}
+}
+
+@media screen and (max-width: 540px){
 	.invited h2 {
 		font-size: calc(4vh + 4vw);
 	}
@@ -337,35 +357,224 @@ nav.sticky .logo h1 {
 */
 .aipono {
 	align-items: center;
-	background-color: rgba(25, 129, 77, 0.8);
 	margin-top: 10vh;
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 10vh;
 	position: absolute;
 	width: 100vw;
 }
 
-.aipono {
+.aipono .landing {
+	background-color: rgba(25, 129, 77, 0.8);
+	display: flex;
+	justify-content: center;
+	padding: 5vh 0;
+	width: 100%;
+}
+
+.aipono .landing .text {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+.aipono .landing .text img {
+	width: 0;
+}
+
+.aipono .landing .text h2 {
+	font-size: calc(4vh + 3vw);
+	padding: 2vh;
+}
+
+.aipono .landing .text h3 {
+	margin-top: 2vh;
+	font-size: calc(2vh + 1.5vw);
+}
+
+.aipono .landing .text h4 {
+	font-size: calc(1vh + 1vw);
+}
+
+.aipono .landing img {
+	width: 540px;
+}
+
+@media screen and (max-width: 1024px){
+	.aipono .landing {
+		padding: 0 0 3vh;
+	}
+	.aipono .landing img {
+		width: 0;
+	}
+	.aipono .landing .text {
+		align-items: center;
+		text-align: center;
+		width: 100%;
+	}
+	.aipono .landing .text img {
+		width: 540px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.aipono .landing .text img {
+		width: 90%;
+	}
+}
+
+.aipono .content {
+	display: flex;
+	justify-content: space-between;
+	width: calc(400px + 44vw);
+}
+
+.aipono .content > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.aipono .content > div h2 {
+	margin: 2vh 0;
+	font-size: calc(2vh + 1.5vw);
+}
+
+.aipono .content .recap {
+	width: 40vw;
+}
+
+.aipono .content .recipes {
+	width: 400px;
+}
+
+.dish {
+	align-items: center;
+	background-color: #eee;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5vh;
+}
+
+.dish img {
+	display: flex;
+	width: 250px;
+}
+
+.dish .show {
+	display: flex;
+}
+
+
+.aipono .expandable {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	border: none;
+	text-align: center;
+	outline: none;
+	font-size: 3vh;
+}
+
+.recipes .expandable {
+	width: 150px;
+}
+
+.recap .expandable {
+	width: 100%;
+}
+  
+.aipono .active, .aipono .expandable:hover {
+	background-color: #ccc;
+  }
+  
+.aipono .content .text {
+
+	overflow: hidden;
+	background-color: #f1f1f1;
+	text-align: center;
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
+
+	width: 100%;
+}
+
+.aipono .content .text h4 {
+	font-size: calc(1.5vh + 1vw);
+	padding-top: 10px;
+}
+
+.aipono .content .text p {
+	font-size: calc(1.5vh + 0.5vw);
+	padding: 0 18px 18px;
+}
+
+.expandable:after {
+	content: '\02795';
+	font-size: 13px;
+	color: white;
+	float: right;
+	margin-left: 5px;
+}
+  
+.active:after {
+	content: "\2796";
+}
+
+.aipono .content .recap .outline {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 }
 
-.aipono h2 {
-	font-size: calc(3vh + 2vw);
-	padding: 2vh;
+.aipono .content .recap .outline .video-container {
+	position: relative;
+	padding-top: 56.25%;
+	width: 40vw;
+	margin-bottom: 3vh;
 }
 
-.aipono img {
-	width: 540px;
+.aipono .content .recap .outline iframe {
+	border: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
-.aipono h3 {
-	margin-top: 2vh;
-	font-size: calc(2vh + 1.5vw);
+@media screen and (max-width: 768px){
+	.aipono .content{
+		flex-direction: column;
+		width: 400px;
+	}
+	.aipono .content > div h2 {
+		font-size: calc(3vh + 3vw);
+	}
+	.aipono .content .recap {
+		width: 100%;
+	}
+	.aipono .content .recap .outline .video-container {
+		width: 100%;
+	}
+
+	@media screen and (max-width: 480px){
+		.dish img {
+			display: flex;
+			width: 50vw;
+		}
+	}
 }
 
-.aipono h4 {
-	font-size: calc(1vh + 1vw);
+.aipono .mahalo p{
+	margin-top: 5vh;
+	font-size: calc(1vw + 1vh);
+	margin-left: 5%;
+	text-align: center;
+	width: 90%;
 }
+
