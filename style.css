@@ -438,8 +438,10 @@ nav.sticky .logo h1 {
 }
 
 .aipono .content > div h2 {
-	margin: 2vh 0;
 	font-size: calc(2vh + 1.5vw);
+	margin: 2vh 0;
+	text-align: center;
+	
 }
 
 .aipono .content .recap {
@@ -492,13 +494,11 @@ nav.sticky .logo h1 {
   }
   
 .aipono .content .text {
-
 	overflow: hidden;
 	background-color: #f1f1f1;
 	text-align: center;
 	max-height: 0;
 	transition: max-height 0.2s ease-out;
-
 	width: 100%;
 }
 
@@ -509,7 +509,7 @@ nav.sticky .logo h1 {
 
 .aipono .content .text p {
 	font-size: calc(1.5vh + 0.5vw);
-	padding: 0 18px 18px;
+	padding: 0 18px;
 }
 
 .expandable:after {
@@ -524,7 +524,7 @@ nav.sticky .logo h1 {
 	content: "\2796";
 }
 
-.aipono .content .recap .outline {
+.aipono .content .recap > div {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -561,13 +561,42 @@ nav.sticky .logo h1 {
 	.aipono .content .recap .outline .video-container {
 		width: 100%;
 	}
+}
 
-	@media screen and (max-width: 480px){
-		.dish img {
-			display: flex;
-			width: 50vw;
-		}
+@media screen and (max-width: 480px){
+	.dish img {
+		display: flex;
+		width: 50vw;
 	}
+	.aipono .content {
+		align-items: center;
+		width: 90vw;
+	}
+	.recipes .expandable {
+		width: 40vw;
+	}
+	.aipono .content .text {
+		width: 90vw;
+	}
+}
+
+.aipono .materials {
+	margin-top: 3vh;
+}
+
+.aipono .quote {
+	margin-top: 5vh;
+}
+
+.aipono .quote h3 {
+	font-size: calc(1.5vh + 1vw);
+	text-align: center;
+}
+
+.aipono .quote h4 {
+	font-size: calc(1vh + 1vw);
+	text-align: right;
+	width: 100%;
 }
 
 .aipono .mahalo p{
@@ -578,3 +607,14 @@ nav.sticky .logo h1 {
 	width: 90%;
 }
 
+@media screen and (max-width: 768px){
+	.aipono .quote h3 {
+		font-size: calc(2vh + 2vw);
+	}
+	.aipono .quote h4 {
+		font-size: calc(1.5vw + 1.5vh);
+	}
+	.aipono .mahalo p{
+		font-size: calc(1.5vw + 1.5vh);
+	}
+}
