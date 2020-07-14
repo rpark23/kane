@@ -555,6 +555,12 @@ nav.sticky .logo h1 {
 	.aipono .content > div h2 {
 		font-size: calc(3vh + 3vw);
 	}
+	.aipono .content .text h4 {
+		font-size: calc(2vh + 2vw);
+	}
+	.aipono .content .text p {
+		font-size: calc(1.5vh + 1.5vw);
+	}
 	.aipono .content .recap {
 		width: 100%;
 	}
@@ -571,6 +577,7 @@ nav.sticky .logo h1 {
 	.aipono .content {
 		align-items: center;
 		width: 90vw;
+		overflow-x: hidden;
 	}
 	.recipes .expandable {
 		width: 40vw;
