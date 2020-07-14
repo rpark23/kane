@@ -469,7 +469,6 @@ nav.sticky .logo h1 {
 	display: flex;
 }
 
-
 .aipono .expandable {
 	background-color: #eee;
 	color: #444;
@@ -479,6 +478,10 @@ nav.sticky .logo h1 {
 	text-align: center;
 	outline: none;
 	font-size: 3vh;
+}
+
+.aipono .text-only .expandable {
+	width: 400px;
 }
 
 .recipes .expandable {
@@ -582,6 +585,9 @@ nav.sticky .logo h1 {
 	.recipes .expandable {
 		width: 40vw;
 	}
+	.aipono .text-only .expandable {
+		width: 100%;
+	}
 	.aipono .content .text {
 		width: 90vw;
 	}
@@ -593,6 +599,7 @@ nav.sticky .logo h1 {
 
 .aipono .quote {
 	margin-top: 5vh;
+	width: 80%;
 }
 
 .aipono .quote h3 {
@@ -601,6 +608,7 @@ nav.sticky .logo h1 {
 }
 
 .aipono .quote h4 {
+	margin-top: 3vh;
 	font-size: calc(1vh + 1vw);
 	text-align: right;
 	width: 100%;
