@@ -169,7 +169,7 @@ nav.sticky .logo h1 {
 
 .overlay {
 	position: absolute;
-	height: 100vh;
+	height: 90vh;
 	width: 100vw;
 	background-color: rgba(14, 105, 105, 0.5);
 }
@@ -178,16 +178,24 @@ nav.sticky .logo h1 {
     background-image: url("img/home.jpg");
     background-size: cover;
     background-position: top right;
-    height: 100vh;
+    height: 90vh;
 	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+.home .landing {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 10vw;
+	top: 30vh;
 }
 
 .home .intro {
 	background-color: rgba(225, 235, 226, 0.5);
 	padding: 1vw;
-	position: absolute;
-	right: 10vw;
-	top: 30vh;
 	text-align: center;
 	width: 45vw;
 }
@@ -205,11 +213,8 @@ nav.sticky .logo h1 {
 	margin-top: 2vh;
 }
 
-.scroll {
-	position: absolute;
-	bottom: 30px;
-	right: 35vw;
-	transform: translate(-50%, -50%);
+/*.scroll {
+	transform: translate(50%, -110%);
 	color: white;
 	z-index: 1;
 }
@@ -250,7 +255,7 @@ nav.sticky .logo h1 {
 		opacity: 0;
 		transform: rotate(45deg) translate(15px, 15px);
 	}
-}
+}*/
 
 @media screen and (max-width: 1024px){
 	.home .intro {
@@ -259,17 +264,18 @@ nav.sticky .logo h1 {
 }
 
 @media screen and (max-width: 768px){
-	.home .intro {
-		width: 70vw;
+	.home .landing {
 		left: 15vw;
+	}
+	.home .intro {
+		width: 100%;
 	}
 	.home .intro p {
 		font-size: 2.5vh;
 	}
-
-	.scroll {
+	/*.scroll {
 		right: 50vw;
-	}
+	}*/
 }
 
 @media screen and (max-width: 480px){
@@ -278,17 +284,26 @@ nav.sticky .logo h1 {
 	}
 }
 
+.kukakuka-container {
+	background-color: #ccc;
+}
+
 .kukakuka {
+	border-radius: 10px;
+	position: relative;
+	top: -10vh;
 	display: flex;
-	height: 100vh;
 	justify-content: center;
+	background-color: white;
+	left: 2.5%;
+	width: 95%;
 }
 
 .invited {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin-top: 12vh;	
+	margin-top: 2vh;	
 }
 
 .invited h2 {
@@ -309,12 +324,87 @@ nav.sticky .logo h1 {
 }
 
 .invited h4 {
-	margin-top: 5vh;
+	margin: 5vh 0;
 	font-size: calc(1vh + 1vw);
 	line-height: calc(1.5vh + 1.5vw);
 	text-align: center;
 }
 
+.invited .signup {
+	background-color: #f44336;/*#F06E29;*/
+	cursor: pointer;
+	padding: calc(0.5vw + 0.5vh) calc(1vw + 1vh);
+	border: none;
+	text-align: center;
+	border-radius: calc(2vh + 2vw);
+	font-size: calc(1.5vh + 1.5vw);
+}
+
+.invited .signup:hover {
+	background-color: #f3857d;
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 8vh;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.signup-form {
+	background-color: #fefefe;
+	margin: 5% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 300px; /* Could be more or less, depending on screen size */
+}
+
+.signup-form label {
+	display: block;
+	width: 100%;
+	margin: 1rem 0;
+	font-size: calc(1vh + 1vw);
+}
+
+.signup-form input {
+	display: block;
+	width: 100%;
+	height: calc(1.5vh + 1.5vw);
+	font-size: calc(1vh + 1vw);
+}
+
+.signup-form button {
+	background-color: rgb(11, 160, 48);
+	cursor: pointer;
+	padding: 9px;
+	border: none;
+	text-align: center;
+	outline: none;
+	font-size: 3vh;
+	border-radius: 5px;
+}
+
+.signup-form button:hover {
+	background-color: rgb(112, 180, 129);
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
 @media screen and (max-width: 1024px){
 	.invited h2 {
 		font-size: calc(3vh + 3vw);
@@ -329,6 +419,10 @@ nav.sticky .logo h1 {
 	.invited h4 {
 		font-size: calc(1.5vh + 1vw);
 		line-height: calc(2.5vh + 2vw);
+	}
+	.invited .signup {
+		padding: calc(1vw + 1vh) calc(1.5vw + 1.5vh);
+		font-size: calc(2vh + 2vw);
 	}
 }
 
@@ -349,7 +443,19 @@ nav.sticky .logo h1 {
 		line-height: calc(2.5vh + 2.5vw);
 		width: 90%;
 	}
+	.signup-form label {
+		font-size: calc(1.5vh + 1.5vw);
+	}
 	
+	.signup-form input {
+		display: block;
+		width: 100%;
+		height: calc(2vh + 2vw);
+		font-size: calc(1.5vh + 1.5vw);
+	}
+	.signup-form {
+		width: 250px;
+	}
 }
 
 /* ʻAi Pono Module
@@ -494,7 +600,7 @@ nav.sticky .logo h1 {
   
 .aipono .active, .aipono .expandable:hover {
 	background-color: #ccc;
-  }
+}
   
 .aipono .content .text {
 	overflow: hidden;
@@ -608,7 +714,7 @@ nav.sticky .logo h1 {
 }
 
 .aipono .quote h4 {
-	margin-top: 3vh;
+	margin-top: 1vh;
 	font-size: calc(1vh + 1vw);
 	text-align: right;
 	width: 100%;

@@ -32,36 +32,67 @@
     <div class = "overlay">
     </div>
     <div class="home">
-        <div class="intro">
-            <h1>No Ke Ola Pono o Nā Kāne</h1>
-            <em><h2>for the good health of men</h2></em>
-            <p>A University of Hawaii Cancer Center partnership with Ke Ola Mamo and
-                the Native Hawaiian Health Care System of Oʻahu.
-            </p>
+        <div class="landing">
+            <div class="intro">
+                <h1>No Ke Ola Pono o Nā Kāne</h1>
+                <em><h2>for the good health of men</h2></em>
+                <p>
+                    A University of Hawaii Cancer Center partnership with Ke Ola Mamo,
+                    the Native Hawaiian Health Care System of Oʻahu.
+                </p>
+            </div>
+            <!---->
+            
         </div>
-        <a href = "#kukakuka"><div class = "scroll">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div></a>
+        <!--<a href = "#kukakuka"><div class="more">
+            <button class = "learn"><span>LEARN MORE</span></button>
+            <div class = "scroll">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+            </div>
+         </div></a>-->
     </div>
-    <div class="kukakuka" id = "kukakuka">
-        <div class="invited">
-            <h2>Kāne Kūkākūkā</h2>
-            <h3>If you are a man over 18, you are invited to:</h3>
-            <ul class = "benefits">
-                <li>Join other kāne</li>
-                <li>Share your manaʻo about health</li>
-                <li>Help improve health services for nā kāne</li>
-                <li>Play a role in the future of your health</li>
-                <li>Bring a friend to share in the learning</li>
-                <li>Enjoy a light healthy meal</li>
-            </ul>
-            <h4>Sessions are held regularly throughout the islands during the evening hours.<br>
-                To participate or learn more about this study, contact Kent at (808) 441-8189.
-            </h4>
+    <div class="kukakuka-container">
+        <div class="kukakuka" id = "kukakuka">
+            <div class="invited">
+                <h2>Kāne Kūkākūkā</h2>
+                <h3>If you are a man over 18, you are invited to:</h3>
+                <ul class = "benefits">
+                    <li>Join other kāne</li>
+                    <li>Share your manaʻo about health</li>
+                    <li>Help improve health services for nā kāne</li>
+                    <li>Play a role in the future of your health</li>
+                    <li>Bring a friend to share in the learning</li>
+                    <li>Enjoy a light healthy meal</li>
+                </ul>
+                <h4>Sessions are held regularly throughout the islands during the evening hours.</h4>
+                <button class = "signup" id = "signup-button">SIGN UP</button>
+                <div id="signup-popup" class="modal">
+                    <div class="signup-form">
+                        <span class="close">&times;</span>
+                        <form action="{{ SERVICE URL }}" method="POST">
+                            <label>
+                                Name: 
+                                <input type="text" name="name" required>
+                            </label>
+                            <label>
+                                Email: 
+                                <input type="email" name="reply_to" required>
+                            </label>
+                            <label>
+                                Phone Number: 
+                                <input type="phone" name="call" required>
+                            </label>
+                            <button type="submit">Submit!</button>
+                        </form>
+                    </div>
+                  </div>            
+                <h4>For more information about this study, contact Kent at (808) 441-8189.</h4>
+            </div>
         </div>
     </div>
+    
     <!--<div class="sponsors">
        <h3>Mahalo to our sponsors!</h3> 
     </div>-->
