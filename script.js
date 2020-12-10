@@ -68,3 +68,15 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function flip(event){
+	const element = event.currentTarget;
+	if (element.className === "card") {
+    if(element.style.transform == "rotateY(180deg)") {
+      element.style.transform = "rotateY(0deg)";
+    }
+    else {
+      element.style.transform = "rotateY(180deg)";
+    }
+  }
+};

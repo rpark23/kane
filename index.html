@@ -1,102 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Ke Ola Pono o Nā Kāne</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='icon' href='img/Favicon.png' type='image/icon'/ >
+  <title>No Ke Ola Pono o Nā Kāne</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href = "index.html"><h1>The Kāne Initiative</h1></a>
-        </div>
-        <ul class = "nav-links">
-            <li>
-                <a href = "aipono.html" target = "_blank">‘Ai Pono</a>
-            </li>
-            <li>
-                <a href = "#cordage">Cordage</a>
-            </li>
-            <li>
-                <a href = "#pule">Pule</a>
-            </li>
-        </ul>
-        <div class="burger">
-            <div class = "line1"></div>
-            <div class = "line2"></div>
-            <div class = "line3"></div>
-        </div>
-    </nav>
-    <div class = "overlay">
+  <nav>
+    <div class="logo">
+      <a href = "index.html"><h1>The Kāne Project</h1></a>
     </div>
-    <div class="home">
-        <div class="landing">
-            <div class="intro">
-                <h1>No Ke Ola Pono o Nā Kāne</h1>
-                <em><h2>for the good health of men</h2></em>
-                <p>
-                    A University of Hawaii Cancer Center partnership with Ke Ola Mamo,
-                    the Native Hawaiian Health Care System of Oʻahu.
-                </p>
-            </div>
-            <!---->
-            
-        </div>
-        <!--<a href = "#kukakuka"><div class="more">
-            <button class = "learn"><span>LEARN MORE</span></button>
-            <div class = "scroll">
-                 <span></span>
-                 <span></span>
-                 <span></span>
-            </div>
-         </div></a>-->
+    <ul class = "nav-links">
+      <li>
+        <a href = "#manao">Mana‘o</a>
+      </li>
+      <li>
+        <a href = "#kupuna">Kūkākūkā</a>
+      </li>
+      <li>
+        <a href = "#kauka">Mahalo</a>
+      </li>
+    </ul>
+    <div class="burger">
+      <div class = "line1"></div>
+      <div class = "line2"></div>
+      <div class = "line3"></div>
     </div>
-    <div class="kukakuka-container">
-        <div class="kukakuka" id = "kukakuka">
-            <div class="invited">
-                <h2>Kāne Kūkākūkā</h2>
-                <h3>If you are a man over 18, you are invited to:</h3>
-                <ul class = "benefits">
-                    <li>Join other kāne</li>
-                    <li>Share your manaʻo about health</li>
-                    <li>Help improve health services for nā kāne</li>
-                    <li>Play a role in the future of your health</li>
-                    <li>Bring a friend to share in the learning</li>
-                    <li>Enjoy a light healthy meal</li>
-                </ul>
-                <h4>Sessions are held regularly throughout the islands during the evening hours.</h4>
-                <button class = "signup" id = "signup-button">SIGN UP</button>
-                <div id="signup-popup" class="modal">
-                    <div class="signup-form">
-                        <span class="close">&times;</span>
-                        <form action="{{ SERVICE URL }}" method="POST">
-                            <label>
-                                Name: 
-                                <input type="text" name="name" required>
-                            </label>
-                            <label>
-                                Email: 
-                                <input type="email" name="reply_to" required>
-                            </label>
-                            <label>
-                                Phone Number: 
-                                <input type="phone" name="call" required>
-                            </label>
-                            <button type="submit">Submit!</button>
-                        </form>
-                    </div>
-                  </div>            
-                <h4>For more information about this study, contact Kent at (808) 441-8189.</h4>
+  </nav>
+  <div class = "overlay">
+  </div>
+  <div class="home">
+    <div class="landing">
+      <div class="sessions">
+        <h2>Upcoming Sessions</h2>
+        <div class="sessions-scroll">
+          <div class="session">
+            <img src = "img/meal.jpg">
+            <div class = "text">
+              <h3>‘Ai Pono </br> By Herbert Hoe</h3>
+              <h3>Monday, November 16 </br> 5:30-6:30pm</h3>
             </div>
+          </div>
+          <div class="session">
+            <img src = "img/cordage.jpg">
+            <div class = "text">
+              <h3>Kaula </br> By Sonny Kaulukukui</h3>
+              <h3>Tuesday, November 24 </br> 5:30-6:30pm</h3>
+            </div>
+          </div>
+          <div class="session">
+            <img src = "img/mahi.jpg">
+            <div class = "text">
+              <h3>Pule </br> By Aaron Mahi</h3>
+              <h3>Wednesday, December 2 </br> 5:30-6:30pm</h3>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="signup">
+        <h2>Kāne Kūkākūkā</h2>
+        <h3>If you are a man over 18, you are invited to:</h3>
+        <p>
+          Join other kāne in sharing your manaʻo about health and
+          helping to improve health services for nā kāne. Take control of
+          the future of your health!
+        </p>
+        <button class="signup-link">SIGN UP FOR A SESSION</button>
+      </div>
     </div>
-    
-    <!--<div class="sponsors">
-       <h3>Mahalo to our sponsors!</h3> 
-    </div>-->
-    <script src="script.js"></script>
-</body>
+    <div class="info">
+      <div class = "about">
+        <img src = "img/Kekuni.png">
+        <div class = "text">
+          <h2>About The Kāne Project</h2>
+          <h4>Started under the guidance of Kauka Kekuni Blaisdell, No Ke Ola
+            Pono o Nā Kāne is committed to improving the health and
+            well-being of Native Hawaiian kāne living in Hawai‘i. We holomua
+            (move forward) with community health kūkākūkā (discussions) that
+            enrich kāne experiences with health services and health choices.
+          </h4>
+        </div>
+      </div>
+      <img src = "img/uhcc.jpg">
+    </div>
+  </div>
+  <div class="modules" id = "kukakuka">
+      <div class="invited">
+        <h2>Mana'o From Kupuna Kāne</h2>
+        <div class="descriptions">
+          <div class="module">
+            <h3>‘Ai Pono</h3>
+            <img src = "img/meal.jpg">
+            <p>
+              Led by Uncle Herbert Hoe, the 'Ai Pono module aims to improve
+              the health of Native Hawaiian men by incorporating a traditional
+              Hawaiian diet. Learn how to prepare these ono dishes and how they
+              will benefit you and your 'ohana!
+            </p>
+          </div>
+          <div class="module">
+            <h3>Kaula</h3>
+            <img src = "img/cordage.jpg">
+            <p>
+              In this module we will be learning about the Hawaiian art of
+              kaula [cordage] from Sonny Kaulukukui. Kaula formed a key cornerstone of Hawaiian
+              society and used for hunting, fishing, and construction. Join us
+              in learning about how this traditional practice relates to
+              Hawaiian health and culture.
+            </p>
+          </div>
+          <div class="module">
+            <h3>Pule</h3>
+            <img src = "img/mahi.jpg">
+            <p>
+              We share our 'ike on the message of Pule, and its role in the
+              lives of our ancestors and us today. Our featured kupuna kāne is
+              Kahu Aaron Mahi, who shares his mana'o and 'ike on how to
+              compose a prayer to bridge the connection between kāne to Mākua.
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="kukakuka">
+    <h2>Kūkākūkā Sessions</h2>
+    <div class="testimony">
+      <div class="testimony-img">
+      </div>
+      <div class="text">
+        <p>
+          "I think something like this (kūkākūkā session) good, you know,
+          on a regular basis like how we’ve been doing. You know, this will keep
+          us, you know, in check. ‘Cause sometimes we do tend to go astray."
+        </p>
+        <br/>
+        <h4>-Kāne Kūkākūkā Participant</h4>
+      </div>
+    </div>
+    <div class="locations">
+      <img src = "img/session.jpg"/>
+      <img src = "img/locations.jpg"/>
+    </div>
+  </div>
+  <div class="people">
+    <h2>Mahalo Nui Loa!</h2>
+    <div class="kekuni-container">
+      <div class="frame">
+        <img src = "img/KekuniMahalo.png">
+        <h4>Kekuni Blaisdell, MD</h4>
+      </div>
+      <p>Ho‘maika‘i (gratitude/thanks) to our mentor, Kauka Kekuni Blaisdell,
+        who tirelessly gave his expertise and support to advance the health and
+        healthcare for kanaka maoli (Hawaiian people) throughout his lifetime.
+        Kekuni continues to be with us spiritually, and his dedication and gifts
+        will remain the goal for all of us to strive to attain.
+      </p>
+    </div>
+    <div class = "facilitators">
+      <img src ="img/facilitators.jpg"/>
+    </div>
 
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
